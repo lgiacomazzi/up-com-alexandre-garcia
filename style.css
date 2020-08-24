@@ -79,6 +79,9 @@ h4 {
   .hdnmob {
     display: none;
   }
+  section {
+    padding: 20px 0px;
+  }
 }
 
 .display-1 {
@@ -182,13 +185,19 @@ h4 {
   .navbar {
     box-shadow: 0 -10px 20px #00000050;
     padding: 10px 25px;
-    background: white;
+    background: #ffffffde;
   }
   .navbar-brand img {
     max-width: 200px;
   }
   .navbar .navbar-nav {
-    margin-top: 10px;
+    margin-top: 20px;
+  }
+  .navbar .navbar-nav li.nav-item {
+    align-self: center;
+  }
+  .display-1 {
+    font-size: 6rem;
   }
 }
 
@@ -230,38 +239,79 @@ h4 {
   padding: 40px 0px;
 }
 
+#info .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 #info h4 {
   margin: 0px;
+  display: flex;
+  align-items: center;
 }
 
-#info .encontros:before {
-  content: "8";
-  position: absolute;
-  margin-left: -50px;
-  font-family: "Epilogue";
-  font-size: 60px;
-  margin-top: 17px;
+#info .encontros {
+  margin-right: 16px;
+  content: url(./img/encontros.svg);
 }
 
-#info .aula-noite:before {
+#info .aula-noite {
+  margin-right: 16px;
   content: url(./img/aula-noturna.svg);
-  position: absolute;
-  margin-top: -5px;
-  margin-left: -70px;
 }
 
-#info .horas-conteudo:before {
-  content: "12h";
-  position: absolute;
-  margin-left: -100px;
-  font-family: "Epilogue";
-  font-size: 50px;
-  margin-top: 17px;
+#info .horas-conteudo {
+  margin-right: 16px;
+  content: url(./img/horas-conteudo.svg);
+}
+
+#formato #materiais p {
+  display: flex;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+#formato #materiais .img1 {
+  content: url(./img/ao-vivo.svg);
+  margin-right: 10px;
+}
+
+#formato #materiais .img2 {
+  content: url(./img/group.svg);
+  margin-right: 10px;
+}
+
+#formato #materiais .img3 {
+  content: url(./img/gravadas.svg);
+  margin-right: 10px;
 }
 
 @media (max-width: 992px) {
   .card-deck .card h4 {
     font-size: 20px;
+  }
+  #info {
+    padding: 20px;
+  }
+  #info .container {
+    align-items: center;
+    flex-direction: column;
+  }
+  #info h4 {
+    margin-bottom: 24px;
+  }
+  #info h4:last-of-type {
+    margin-bottom: 0px;
+  }
+  #materiais {
+    flex-direction: column;
+    align-items: center;
+  }
+  #formato #materiais p {
+    width: fit-content;
   }
 }
 
@@ -291,6 +341,7 @@ b {
 @media (max-width: 992px) {
   .bg-pattern {
     background-size: 100vw;
+    padding: 20px !important;
   }
 }
 
@@ -349,14 +400,8 @@ b {
   background: #eaeaea;
 }
 
-.instrutor {
-  background: black;
-  max-width: 80%;
-  margin: auto;
-}
-
 footer {
-  background: linear-gradient(125.63deg, #f66937 5.87%, #f0353a 82.88%);
+  background: transparent;
   color: white;
 }
 
@@ -392,6 +437,9 @@ footer {
   .social {
     margin-left: 0px;
   }
+  footer img#logo {
+    content: url(./img/logo-footer2.png);
+  }
 }
 
 #webinar {
@@ -416,6 +464,9 @@ footer {
 @media (max-width: 992px) {
   #ministrante {
     text-align: center;
+  }
+  #ministrante img {
+    max-width: 50%;
   }
   #ministrante #webinar {
     text-align: left;

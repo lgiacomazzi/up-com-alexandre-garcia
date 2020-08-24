@@ -40,6 +40,8 @@
     ></script>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
     <!-- Epilogue & Anton Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:wght@400;700&display=swap"
@@ -71,28 +73,36 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre o Curso</a>
+              <a class="nav-link" href="#sobre" onclick="clearNav();"
+                >Sobre o Curso</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#ministrante">Ministrante</a>
+              <a class="nav-link" href="#ministrante" onclick="clearNav();"
+                >Ministrante</a
+              >
             </li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#investimento">Valores</a>
+              <a class="nav-link" href="#investimento" onclick="clearNav();"
+                >Investimento</a
+              >
             </li>
-            <li class="nav-item d-flex align-items-center">
-              <a class="cta cta-primary" href="#investimento">Inscreva-se</a>
+            <li class="nav-item d-flex align-items-center mb-lg-0 mb-4">
+              <a
+                class="cta cta-primary"
+                href="#investimento"
+                onclick="clearNav();"
+                >Inscreva-se</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Banner -->
-
     <video autoplay muted loop playsinline id="video-content">
       <source src="./img/Up.mp4" type="video/mp4" />
     </video>
-
     <div id="banner-content">
       <h1 class="display-1">UP</h1>
       <h2>Temas emergentes para o seu desenvol&shyvi&shymen&shyto</h2>
@@ -102,14 +112,14 @@
       <a class="cta cta-outline-primary" href="#sobre">Mais Informações</a>
     </div>
     <section id="info" class="bg-white">
-      <div class="container d-flex flex-row justify-content-around">
-        <h4 class="encontros">encontros <br />semanais</h4>
-        <h4 class="aula-noite">
-          aulas <br />
+      <div class="container">
+        <h4><span class="encontros"></span>encontros <br />semanais</h4>
+        <h4>
+          <span class="aula-noite"></span> aulas <br />
           à noite
         </h4>
-        <h4 class="horas-conteudo">
-          de <br />
+        <h4>
+          <span class="horas-conteudo"></span> de <br />
           conteúdo
         </h4>
       </div>
@@ -170,26 +180,32 @@
               A quem se destina?
             </h4>
             <p>
-              O UP é um curso rápido que trará uma apanhado de 8 temas
-              emergentes que busca capacitar empreendedores, gestores e
-              profissionais para uma melhor performance profissional na área de
-              gestão, empreendedorismo e carreira executiva.
+              Empreendedores e/ou aspirantes ao empreendedorismo, gestores,
+              executivos, profissionais de startups e pessoas interessadas em
+              temas ligados à criatividade e inovação.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <section id="formato" class="bg-black">
+    <section id="formato" class="bg-black pd-60">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-6 col-12">
-            <h2>Formato dos Materiais</h2>
+          <div class="col col-lg-6 col-12 mx-auto text-center">
+            <h2>Formato e Materiais</h2>
             <p>
               Os encontros acontecerão ao vivo via Google Meet, com espaço para
               debates e trocas. As aulas serão disponibilizadas posteriormente.
               Alunos terão acesso a um grupo fechado onde serão compartilhados
               artigos, vídeos e sugestões de livros sobre os temas.
             </p>
+          </div>
+          <div class="col col-lg-8 mx-auto text-center my-4">
+            <div id="materiais" class="d-flex justify-content-around">
+              <p><span class="img1"></span><b>Aulas ao vivo</b></p>
+              <p><span class="img2"></span><b>Grupo exclusivo</b></p>
+              <p><span class="img3"></span><b>Aulas gravadas</b></p>
+            </div>
           </div>
           <div class="col col-12">
             <div class="card-deck mt-4">
@@ -219,7 +235,7 @@
                 <p>SCRUM e SPRINT</p>
               </div>
             </div>
-            <div class="card-deck mt-4">
+            <div class="card-deck mt-3 mt-lg-4">
               <div class="card p-4">
                 <p>
                   Encontro 5
@@ -251,8 +267,59 @@
         </div>
       </div>
     </section>
+    <!-- Ao final do curso você... -->
+    <section id="vantagens" class="text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12 text-center my-4">
+            <h2>Ao final do curso você:</h2>
+          </div>
+          <div class="col col-12">
+            <div class="card-deck mt-4">
+              <div class="card p-4 text-center">
+                <img
+                  src="./img/idea.svg"
+                  width="50"
+                  class="mx-auto mb-3"
+                  alt="Idea"
+                />
+                <h4>
+                  Estará atualizado em relação às questões da inovação,
+                  criatividade e da cultura das startups.
+                </h4>
+              </div>
+              <div class="card p-4 text-center">
+                <img
+                  src="./img/chart.svg"
+                  width="50"
+                  class="mx-auto mb-3"
+                  alt="Idea"
+                />
+                <h4>
+                  Descobrirá como aplicar conceitos emergentes para impulsionar
+                  a produção de inovação em seus negócios, carreira ou em sua
+                  corporação.
+                </h4>
+              </div>
+              <div class="card p-4 text-center">
+                <img
+                  src="./img/shuffle.svg"
+                  width="50"
+                  class="mx-auto mb-3"
+                  alt="Idea"
+                />
+                <h4>
+                  Poderá experimentar novas abordagens na sua empresa ou no seu
+                  empreendimento, criando um novo caminho para inovar e
+                  apresentar diferenciais competitivos.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Sobre o ministrante -->
-    <section class="bg-pattern"></section>
     <section id="ministrante" class="bg-black pd-60">
       <div class="container">
         <div class="row">
@@ -261,11 +328,11 @@
               src="./img/garcia.jpg"
               alt="Foto do Mentor"
               width="100%"
-              class="instrutor mb-5 mx-auto"
+              class="mb-5 mx-auto"
             />
           </div>
           <div class="col col-lg-6 col-12 order-lg-1">
-            <p class="text-primary">Ministrante</p>
+            <p>Ministrante</p>
             <h1>
               Alexandre Garcia
             </h1>
@@ -290,206 +357,13 @@
         </div>
       </div>
     </section>
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="row">
-          <div class="col col-12">
-            <h2>FAQ</h2>
-            <p>Dúvidas Frequentes</p>
-            <div class="accordion" id="accordionExample">
-              <div class="">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Quando irão abrir novas turmas?
-                    </button>
-                  </h2>
-                </div>
-
-                <div
-                  id="collapseOne"
-                  class="collapse"
-                  aria-labelledby="headingOne"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">Não temos datas previstas.</div>
-                </div>
-              </div>
-              <div class="">
-                <div class="card-header" id="headingTwo">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      O curso é presencial ou remoto?
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    O curso é remoto. As aulas acontecerão no formato síncrono
-                    através de videoconferências e outras ferramentas de
-                    interação. O aluno também terá acesso às aulas gravadas.
-                  </div>
-                </div>
-              </div>
-              <div class="">
-                <div class="card-header" id="headingThree">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      Existe certificado de conclusão do curso?
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseThree"
-                  class="collapse"
-                  aria-labelledby="headingThree"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    Sim. O participante receberá Certificado de Participação de
-                    forma eletrônica após o término do curso.
-                  </div>
-                </div>
-              </div>
-              <div class="">
-                <div class="card-header" id="headingFour">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseFour"
-                      aria-expanded="true"
-                      aria-controls="collapseFour"
-                    >
-                      Como funcionarão as mentorias?
-                    </button>
-                  </h2>
-                </div>
-
-                <div
-                  id="collapseFour"
-                  class="collapse"
-                  aria-labelledby="headingFour"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    As mentorias em Lean Office serão um bônus para os inscritos
-                    nesse primeiro curso de Lean Office. A sessão de mentoria
-                    será em grupo (no máximo 5 participantes por grupo) e serão
-                    realizadas até 3 meses após o curso. Horários a combinar em
-                    função da disponibilidade do participante e consultor.
-                  </div>
-                </div>
-              </div>
-              <div class="">
-                <div class="card-header" id="headingFive">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >
-                      É possível esclarecer dúvidas com os instrutores durante
-                      as aulas?
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseFive"
-                  class="collapse"
-                  aria-labelledby="headingFive"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    Com certeza! A possibilidade de comunicação com o instrutor
-                    simultaneamente é uma das vantagens da aula on-line. A
-                    participação dos alunos enriquece o aprendizado.
-                  </div>
-                </div>
-              </div>
-              <div class="">
-                <div class="card-header" id="headingSix">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseSix"
-                      aria-expanded="false"
-                      aria-controls="collapseSix"
-                    >
-                      Por quanto tempo tenho acesso ao curso?
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseSix"
-                  class="collapse"
-                  aria-labelledby="headingSix"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    As apostilhas estarão disponíveis para download. Já as
-                    gravações das aulas ficarão disponíveis por um ano após o
-                    início do curso.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col col-lg-6 col-12">
-            <p id="question">
-              Caso você tenha outras dúvidas, <br />
-              por favor enviar um e-mail para <br />
-              <a href="mailto:contato@produttare.com.br"
-                >contato@produttare.com.br</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="bg-pattern"></section>
     <!-- Investimento -->
-    <section id="investimento" class="bg-black">
+    <section id="investimento" class="bg-black pd-60">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-6 col-12">
-            <h2>Investimento e Formas de Pagamento</h2>
-            <p>
-              Temos dois lotes de ingressos à depender da disponiblidade de
-              vagas no curso.
-            </p>
+          <div class="col col-lg-6 col-12 text-center mx-auto">
+            <h2>Investimento</h2>
             <p>
               Estamos fazendo todas as inscrições e pagamentos através do site
               de eventos Sympla. Todos os ingressos vendidos através da Sympla
@@ -500,18 +374,10 @@
               compra:
             </p>
             <a
-              class="cta cta-primary display-inline mb-3"
+              class="cta cta-secondary"
               href="https://www.sympla.com.br/formacao-de-lideres-lean-office__906754"
               >Quero Comprar</a
             >
-            <p>
-              <b>Pessoas Jurídicas</b> poderão fazer suas inscrições via Sympla
-              ou enviar email para contato@produttare.com.br com o assunto:
-              Inscrição Curso Lean Office
-            </p>
-          </div>
-          <div class="col col-lg-6 col-12" id="sympla-widget">
-            <p>Selecione seu ingresso:</p>
           </div>
         </div>
       </div>
@@ -519,73 +385,51 @@
     <footer>
       <div class="container py-5">
         <div class="d-flex justify-content-between align-items-center">
-          <a href="https://www.produttare.com.br">
-            <img
-              src="https://www.produttare.com.br/img/produttare-white.svg"
-              alt="Logo da Produttare"
-              width="160"
+          <a href="https://www.speakeralexandregarcia.com.br/">
+            <img id="logo" src="./img/logo-footer.png" alt="Logo" width="160"
           /></a>
-          <div class="d-flex justify-content-between align-items-center">
-            <span>Siga Produttare nas redes sociais:</span>
-            <div class="social">
-              <a
-                href="http://facebook.com.br/produttare"
-                title="Facebook da Produttare"
-              >
-                <img
-                  src="https://www.produttare.com.br/img/svg/facebook-white.svg"
-                  alt="Facebook"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/106820"
-                title="Linkedin da Produttare"
-              >
-                <img
-                  src="https://www.produttare.com.br/img/svg/linkedin-white.svg"
-                  alt="Linkedin"
-                />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCKeX5S-OxmYEB8OHYqCcXTA"
-                title="Youtube da Produttare"
-              >
-                <img
-                  src="https://www.produttare.com.br/img/svg/youtube-white.svg"
-                  alt="Youtube"
-                />
-              </a>
+          <div class="text-right">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <span>Siga nas redes sociais:</span>
+              <div class="social">
+                <a
+                  href="http://facebook.com.br/produttare"
+                  title="Facebook da Produttare"
+                >
+                  <img
+                    src="https://www.produttare.com.br/img/svg/facebook-white.svg"
+                    alt="Facebook"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/106820"
+                  title="Linkedin da Produttare"
+                >
+                  <img
+                    src="https://www.produttare.com.br/img/svg/linkedin-white.svg"
+                    alt="Linkedin"
+                  />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCKeX5S-OxmYEB8OHYqCcXTA"
+                  title="Youtube da Produttare"
+                >
+                  <img
+                    src="https://www.produttare.com.br/img/svg/youtube-white.svg"
+                    alt="Youtube"
+                  />
+                </a>
+              </div>
             </div>
+            <a
+              href="https://www.speakeralexandregarcia.com.br/"
+              class="text-dark"
+              >speakeralexandregarcia.com.br/</a
+            >
           </div>
         </div>
       </div>
     </footer>
-    <div id="sympla-widget-906754" height="auto"></div>
-    <script src="https://www.sympla.com.br/js/sympla.widget-pt.js/906754"></script>
-    <script>
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        return;
-        if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-        ) {
-          document.getElementById("navbar").style.background = "black";
-        } else {
-          document.getElementById("navbar").style.background = "transparent";
-        }
-      }
-      function goToWebinar() {
-        window.open(
-          "https://eventos.produttare.com.br/webinar-leanoffice-07-07-2020",
-          "_blank"
-        );
-      }
-      const newElement = document.getElementById("sympla-widget");
-      const symplaElement = document.getElementById("sympla-widget-906754");
-      newElement.appendChild(symplaElement);
-    </script>
+    <section class="bg-pattern"></section>
   </body>
 </html>
