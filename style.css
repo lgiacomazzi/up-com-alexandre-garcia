@@ -205,6 +205,9 @@ h4 {
   .display-1 {
     font-size: 6rem;
   }
+  .imagem-calendar {
+    max-width: 100%;
+  }
 }
 
 #banner-content {
@@ -354,6 +357,8 @@ b {
 #ministrante img {
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: -16px 16px 0 0 #4069a9;
+  margin-left: 16px;
 }
 
 .card-header {
@@ -483,4 +488,23 @@ footer {
     width: 100%;
     flex: auto;
   }
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-dialog .modal-content {
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.modal-backdrop.show {
+  opacity: 0.9;
+}
+
+.close-button {
+  content: url(./img/close.svg);
+  opacity: 1 !important;
 }
