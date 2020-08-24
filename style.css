@@ -169,6 +169,12 @@ h4 {
   background: var(--blue);
 }
 
+.imagem-calendar {
+  max-width: 600px;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+
 .navbar {
   z-index: 1000;
   font-size: 16px;
