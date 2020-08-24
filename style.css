@@ -1,0 +1,407 @@
+:root {
+  --blue: #6fa5ff;
+  --primary: #6fa5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--blue);
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  text-align: left;
+  background-color: white;
+}
+
+section {
+  border: 1px solid black;
+  padding: 60px 0px;
+}
+
+bg-white {
+  background: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Epilogue", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.display-1 {
+  font-size: 10rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: "Anton";
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+.cta {
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 30px;
+  transition: 300ms;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+}
+
+.cta-primary {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.cta-outline-primary {
+  color: white;
+  border: 1px solid white;
+}
+
+.cta-secondary {
+  color: #000;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.cta-primary:hover,
+.cta-primary:focus,
+.cta-secondary:hover,
+.cta-secondary:focus,
+.cta-outline-primary:hover,
+.cta-outline-primary:focus {
+  color: #000;
+  background-color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  #CTAs {
+    justify-content: space-between;
+    display: flex;
+  }
+  #banner-content h2 {
+    font-size: 28px;
+  }
+  .cta {
+    margin-bottom: 10px;
+  }
+  .cta:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.card {
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 16px;
+}
+
+#formato h4 {
+  margin-bottom: 6px;
+}
+
+#formato .card {
+  border: 1px solid var(--blue);
+  transition: 1000ms;
+}
+
+#formato .card:hover {
+  cursor: pointer;
+  background: var(--blue);
+}
+
+.navbar {
+  z-index: 1000;
+  font-size: 16px;
+  background: white;
+  border-bottom: 1px solid black;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 12px 20px;
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    box-shadow: 0 -10px 20px #00000050;
+    padding: 10px 25px;
+    background: white;
+  }
+  .navbar-brand img {
+    max-width: 200px;
+  }
+  .navbar .navbar-nav {
+    margin-top: 10px;
+  }
+}
+
+#banner-content {
+  position: relative;
+  color: #fff;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 165px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+#video-content {
+  position: fixed;
+  min-width: 100%;
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.navbar-toggler {
+  color: white;
+  border-color: #003366;
+  border: none;
+  padding: 0px;
+}
+
+.navbar-toggler-icon {
+  background-image: url(./img/switcher.svg) !important;
+  width: 20px;
+  height: 20px;
+  filter: brightness(1000);
+}
+
+#info {
+  padding: 40px 0px;
+}
+
+#info h4 {
+  margin: 0px;
+}
+
+#info .encontros:before {
+  content: "8";
+  position: absolute;
+  margin-left: -50px;
+  font-family: "Epilogue";
+  font-size: 60px;
+  margin-top: 17px;
+}
+
+#info .aula-noite:before {
+  content: url(./img/aula-noturna.svg);
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -70px;
+}
+
+#info .horas-conteudo:before {
+  content: "12h";
+  position: absolute;
+  margin-left: -100px;
+  font-family: "Epilogue";
+  font-size: 50px;
+  margin-top: 17px;
+}
+
+@media (max-width: 992px) {
+  .card-deck .card h4 {
+    font-size: 20px;
+  }
+}
+
+b {
+  font-weight: bold;
+}
+
+.pd-60 {
+  border-top: 60px solid transparent;
+}
+
+.bg-gray {
+  background: #eaeaea;
+}
+
+.bg-black {
+  background: black;
+  color: white;
+}
+
+.bg-pattern {
+  background: url(./img/bk-white.svg);
+  background-size: 50vw;
+  padding: 40px !important;
+}
+
+@media (max-width: 992px) {
+  .bg-pattern {
+    background-size: 100vw;
+  }
+}
+
+#ministrante img {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card-header {
+  border: 1px solid #000;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-top-width: 0;
+  background: transparent;
+  padding: 0px;
+}
+
+.card-header > h2 > button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  line-height: 1em;
+  letter-spacing: -0.05em;
+  font-size: 80%;
+}
+
+.card-header > h2 > button:after {
+  content: url(https://produttare.com.br/img/svg/menu_arrow_down_black.svg);
+  position: relative;
+}
+
+#question {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#question:before {
+  content: url(https://produttare.com.br/img/svg/question.svg);
+  position: absolute;
+  left: 16px;
+  top: 33px;
+}
+
+.btn-link {
+  padding: 16px 8px;
+  font-size: 24px;
+  color: #000;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: #000;
+  box-shadow: none;
+  text-decoration: none;
+  background: #eaeaea;
+}
+
+.instrutor {
+  background: black;
+  max-width: 80%;
+  margin: auto;
+}
+
+footer {
+  background: linear-gradient(125.63deg, #f66937 5.87%, #f0353a 82.88%);
+  color: white;
+}
+
+.social {
+  display: flex;
+  margin-left: 16px;
+}
+
+.social a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.social a:last-of-type {
+  margin-right: 0px;
+}
+
+.social a:hover {
+  filter: opacity(0.7);
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  footer .d-flex {
+    flex-direction: column;
+  }
+  footer span {
+    margin: 30px auto;
+  }
+  .social {
+    margin-left: 0px;
+  }
+}
+
+#webinar {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -150px;
+  cursor: pointer;
+}
+
+#webinar:hover {
+  filter: opacity(0.7);
+}
+
+#webinar .img {
+  background: url(https://d335luupugsy2.cloudfront.net/cms/files/76250/1593020007/$apenudi5lg);
+  width: 40%;
+  background-size: cover;
+  flex: 0 0 40%;
+}
+
+@media (max-width: 992px) {
+  #ministrante {
+    text-align: center;
+  }
+  #ministrante #webinar {
+    text-align: left;
+    flex-direction: column;
+  }
+  #ministrante #webinar .img {
+    height: 130px;
+    width: 100%;
+    flex: auto;
+  }
+}
