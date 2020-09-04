@@ -194,7 +194,7 @@ h4 {
     background: #ffffffde;
   }
   .navbar-brand img {
-    max-width: 200px;
+    max-width: 140px;
   }
   .navbar .navbar-nav {
     margin-top: 20px;
@@ -507,4 +507,29 @@ footer {
 .close-button {
   content: url(./img/close.svg);
   opacity: 1 !important;
+}
+
+.pagamento {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0px;
+}
+
+.valor {
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 1em;
+}
+
+.valor-rs {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1em;
+  margin-right: 5px;
+}
+
+.valor-00 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1em;
 }
